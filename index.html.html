@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Strokes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .page {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Splash Screen */
+        #splash {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+
+        #splash h1 {
+            font-size: 3em;
+            background: linear-gradient(to right, orange, purple);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        #splash img {
+            width: 200px;
+            margin-bottom: 70px;
+        }
+
+        /* Login Pages */
+        .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .login input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+        }
+
+        .login button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Home Page */
+        .home {
+    background-color: #f0e0c1; /* Current background color */
+    padding: 20px;
+    min-height: 1070vh; /* Increase height to 150% of the viewport */
+    width: 100%;
+}
+
+
+        .home img {
+    width: 500px; /* 3x larger than the previous size */
+    height: 700px; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+}
+
+
+
+
+        .home h3 {
+            text-align: center;
+        }
+
+        /* Trending Paintings Page */
+        .trending {
+            background-color: #e3f2fd; /* Current background color */
+    padding: 20px;
+    min-height: 350vh; /* Increase height to 150% of the viewport */
+    width: 100%;
+        }
+
+        .trending img {
+    width: 500px; /* Adjust to make images smaller */
+    height: 700px; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+}
+
+.trending h3 {
+            text-align: center;
+        }
+
+
+        /* Notification Page */
+        .notifications {
+            background-color: #fff8e1;
+            padding: 20px;
+        }
+
+        .notifications p {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* My Account Page */
+        .account {
+            background-color: #91b67e; /* Current background color */
+    padding: 20px;
+    min-height: 350vh; /* Increase height to 150% of the viewport */
+    width: 100%;
+        }
+
+        .account img {
+            width: 500px; /* 3x larger than the previous size */
+    height: 700px; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+        }
+
+        .account h3 {
+            text-align: center;
+        }
+
+        .account .settings {
+            margin-top: 20px;
+        }
+
+        .account .settings button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            padding: 10px 0;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash" class="page active">
+        <img src="10.jpg" alt="Bharat Strokes Logo">
+        <h1>Bharat Strokes</h1>
+    </div>
+
+    <!-- Login Page 1 -->
+    <div id="login1" class="page login">
+        <h2>Login</h2>
+        <input type="text" placeholder="Email">
+        <button onclick="showPage('login2')">Next</button>
+    </div>
+
+    <!-- Login Page 2 -->
+    <div id="login2" class="page login">
+        <h2>Enter Password</h2>
+        <input type="password" placeholder="Password">
+        <button onclick="showPage('home')">Login</button>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="page home">
+        <h1>Welcome to Bharat Strokes</h1>
+        <div>
+            <img src="01.jpg" alt="Painting 1">
+            <h3>Sunset Bliss</h3>
+        </div>
+        <div>
+            <img src="02.jpg" alt="Painting 2">
+            <h3>Nature's Melody</h3>
+        </div>
+        <div>
+            <img src="03.jpg" alt="Painting 3">
+            <h3>Abstract Dreams</h3>
+        </div>
+        <div>
+            <img src="04.jpg" alt="Painting 4">
+            <h3>Urban Vibes</h3>
+        </div>
+        <div>
+            <img src="05.jpg" alt="Painting 5">
+            <h3>Golden Horizon</h3>
+        </div>
+        <div>
+            <img src="06.jpg" alt="Painting 6">
+            <h3>Harmony in Blue</h3>
+        </div>
+        <div>
+            <img src="07.jpg" alt="Painting 7">
+            <h3>Floral Symphony</h3>
+        </div>
+        <div>
+            <img src="08.jpg" alt="Painting 8">
+            <h3>Mountain Majesty</h3>
+        </div>
+        <div>
+            <img src="09.jpg" alt="Painting 9">
+            <h3>Twilight Glow</h3>
+        </div>
+        <div>
+            <img src="010.jpg" alt="Painting 10">
+            <h3>Screen Reflection</h3>
+        </div>
+    </div>
+
+    <!-- Trending Paintings Page -->
+    <div id="trending" class="page trending">
+        <h1>Trending Paintings</h1>
+
+        <img src="trending1.jpg" alt="Trending Painting 1">
+        <h3>Spider Man</h3>
+
+        <img src="trending2.jpg" alt="Trending Painting 2">
+        <h3>Gajanan Maharaj</h3>
+
+        <img src="trending3.jpg" alt="Trending Painting 3">
+        <h3>Floral</h3>
+        
+    </div>
+
+    <!-- Notifications Page -->
+    <div id="notifications" class="page notifications">
+        <h1>Notifications</h1>
+        <p>Your artwork "Sunset Bliss" has been sold!</p>
+        <p>New follower: ArtLover123</p>
+        <p>Your artwork "Nature's Melody" has been featured!</p>
+    </div>
+
+    <!-- My Account Page -->
+    <div id="account" class="page account">
+        <h1>My Account</h1>
+        <div>
+            <img src="myart1.jpg" alt="My Artwork 1">
+            <h3>Abstract Harmony</h3>
+        </div>
+        <div>
+            <img src="myart2.jpg" alt="My Artwork 2">
+            <h3>Pastel Dreams</h3>
+        </div>
+        <div>
+            <img src="myart3.jpg" alt="My Artwork 3">
+            <h3>Golden Fields</h3>
+        </div>
+        <div class="settings">
+            <button onclick="showPage('login2')">Change Password</button>
+            <button onclick="showPage('login1')">Logout</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('trending')">Trending</button>
+        <button onclick="showPage('notifications')">Notifications</button>
+        <button onclick="showPage('account')">My Account</button>
+    </nav>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Automatically move from splash screen to login page after 4 seconds
+        setTimeout(() => showPage('login1'), 4000);
+    </script>
+</body>
+</html>
+
+       
